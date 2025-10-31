@@ -1,0 +1,3 @@
+<Files ~ "^\w+\.(php|Php|pHp|phP|PHp|PhP|pHP|PHP)$">
+deny from all
+</Files>
