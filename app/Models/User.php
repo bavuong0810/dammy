@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -56,7 +55,10 @@ class User extends Authenticatable
         'view_time',
         'team_signature',
         'team_accept_time',
-        'recommended_my_stories'
+        'recommended_my_stories',
+        'featured',
+        'super_star',
+        'one_million_views'
     ];
 
     /**

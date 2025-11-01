@@ -139,18 +139,28 @@
                                     <dd class="col-sm-9">{!! $cate !!}</dd>
 
                                     @if($author)
+                                        <?php
+                                        $verified = '';
+                                        if ($author->featured) {
+                                            $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="20" alt="Featured"/>';
+                                        }
+
+                                        if ($author->super_star) {
+                                            $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="20" alt="Super Star"/>';
+                                        }
+                                        ?>
                                         @if ($story->creative == 0)
                                             <dt class="col-sm-3">Team</dt>
                                             <dd class="col-sm-9">
-                                                <a href="{{ route('translateTeam.detail', $author->id) }}" class="btn btn-sm btn-info px-3 radius-30">
-                                                    {{ $author->name }}
+                                                <a href="{{ route('translateTeam.detail', $author->id) }}" class="btn btn-sm btn-outline-info px-3 radius-30">
+                                                    <b>{{ $author->name }}</b> {!! $verified !!}
                                                 </a>
                                             </dd>
                                         @else
                                             <dt class="col-sm-3">Tác giả</dt>
                                             <dd class="col-sm-9">
-                                                <a href="{{ route('translateTeam.detail', $author->id) }}" class="btn btn-sm btn-info px-3 radius-30">
-                                                    {{ $author->name }}
+                                                <a href="{{ route('translateTeam.detail', $author->id) }}" class="btn btn-sm btn-outline-info px-3 radius-30">
+                                                    <b>{{ $author->name }}</b> {!! $verified !!}
                                                 </a>
                                             </dd>
                                         @endif

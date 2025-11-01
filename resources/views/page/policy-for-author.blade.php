@@ -18,10 +18,13 @@
             <li>Theo từng cấp bậc, thu nhập của tác giả/dịch giả cũng sẽ tăng theo:</li>
         </ul>
 
+        <p><b>Hệ thống sẽ dựa vào lượt view của tháng trước đó để trao huy hiệu và phân cấp bậc thưởng áp dụng cho tháng kế tiếp.</b></p>
         <dl>
             <dt>Cấp Thường</dt>
             <dd>8 xu/lượt đọc.</dd>
             <dt>Cấp Nổi bật</dt>
+            <dd>9 xu/lượt đọc.</dd>
+            <dt>Cấp Super Star</dt>
             <dd>10 xu/lượt đọc.</dd>
         </dl>
 
@@ -45,6 +48,7 @@
             <tr><td>1M view</td><td>1M xu + Huy hiệu <b>"Super Star"</b></td></tr>
             </tbody>
         </table>
+        <p><em>Huy hiệu sẽ được trao cho team vào ngày 1 hàng tháng.</em></p>
         <p><em>(Chú ý: độ nhiệt càng cao, phúc lợi càng hấp dẫn! Sẽ được cập nhật thêm!)</em></p>
 
         <h4>Mục thưởng khác</h4>

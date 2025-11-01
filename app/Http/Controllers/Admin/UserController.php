@@ -81,8 +81,8 @@ class UserController extends Controller
         }
 
         if ((int)$request->type == User::UserType['TranslateTeam'] && !empty($request->view_price) && !empty($request->view_time)) {
-            $data['view_price'] = ((int)$request->view_price >= 6) ? (int)$request->view_price : 6;
-            $data['view_time'] = ((int)$request->view_time >= 90) ? (int)$request->view_time : 90;
+            $data['view_price'] = ((int)$request->view_price >= 8) ? (int)$request->view_price : 8;
+            $data['view_time'] = ((int)$request->view_time >= 105) ? (int)$request->view_time : 105;
         }
 
         if ((int)$request->type == User::UserType['User']) {

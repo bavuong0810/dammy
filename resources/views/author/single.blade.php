@@ -38,7 +38,17 @@
                             </div>
                             <div class="col-md-10">
                                 <div class="position-relative">
-                                    <h1 class="card-title">{{ $author->name }}</h1>
+                                    <?php
+                                    $verified = '';
+                                    if ($author->featured) {
+                                        $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="30" alt="Featured"/>';
+                                    }
+
+                                    if ($author->super_star) {
+                                        $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="30" alt="Super Star"/>';
+                                    }
+                                    ?>
+                                    <h1 class="card-title">{{ $author->name }} {!! $verified !!}</h1>
                                     @if($author->about_me != '')
                                         <div class="mt-3 card-text fs-6 description">
                                             {!! nl2br($author->about_me) !!}

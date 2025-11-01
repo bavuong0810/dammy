@@ -435,7 +435,9 @@ class Helpers
                         'team_signature',
                         'recommended_my_stories',
                         'view_time',
-                        'bank_account'
+                        'bank_account',
+                        'featured',
+                        'super_star'
                     ]
                 );
             if ($author) {

@@ -697,6 +697,16 @@ class WebService
             if ($top_contributions_item->avatar != '') {
                 $avatar = asset('images/avatar/thumbs/230/' . $top_contributions_item->avatar);
             }
+
+            $verified = '';
+            if ($top_contributions_item->featured) {
+                $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="20" alt="Featured"/>';
+            }
+
+            if ($top_contributions_item->super_star) {
+                $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="20" alt="Super Star"/>';
+            }
+
             $top_contributions_html .= '<div class="d-flex top-item">
                 <div class="stt" style="color: ' . $colorArray[$key] . '">' . $i + 1 . '</div>
                 <div class="thumbnail">
@@ -705,7 +715,10 @@ class WebService
                 </div>
                 <div class="detail">
                     <h3>
-                        <a href="' . route('translateTeam.detail', $top_contributions_item->id) . '">' . $top_contributions_item->name . '</a>
+                        <a href="' . route('translateTeam.detail', $top_contributions_item->id) . '">
+                            ' . $top_contributions_item->name . '
+                            ' . $verified . '
+                        </a>
                     </h3>
                     <div class="d-flex justify-content-between">
                         ' . $last_chapter . '
@@ -724,6 +737,16 @@ class WebService
             if ($top_user_view_day_item->user->avatar != '') {
                 $avatar = asset('images/avatar/thumbs/230/' . $top_user_view_day_item->user->avatar);
             }
+
+            $verified = '';
+            if ($top_user_view_day_item->user->featured) {
+                $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="20" alt="Featured"/>';
+            }
+
+            if ($top_user_view_day_item->user->super_star) {
+                $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="20" alt="Super Star"/>';
+            }
+
             $top_user_view_day_html .= '<div class="d-flex top-item">
                 <div class="stt" style="color: ' . $colorArray[$key] . '">' . $key + 1 . '</div>
                 <div class="thumbnail">
@@ -734,6 +757,7 @@ class WebService
                     <h3>
                         <a href="' . route('translateTeam.detail', $top_user_view_day_item->user->id) . '">
                             ' . $top_user_view_day_item->user->name . '
+                            ' . $verified . '
                         </a>
                     </h3>
                     <div class="d-flex justify-content-between">
@@ -751,6 +775,16 @@ class WebService
             if ($top_user_view_week_item->user->avatar != '') {
                 $avatar = asset('images/avatar/thumbs/230/' . $top_user_view_week_item->user->avatar);
             }
+
+            $verified = '';
+            if ($top_user_view_week_item->user->featured) {
+                $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="20" alt="Featured"/>';
+            }
+
+            if ($top_user_view_week_item->user->super_star) {
+                $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="20" alt="Super Star"/>';
+            }
+
             $top_user_view_week_html .= '<div class="d-flex top-item">
                 <div class="stt" style="color: ' . $colorArray[$key] . '">' . $key + 1 . '</div>
                 <div class="thumbnail">
@@ -761,6 +795,7 @@ class WebService
                     <h3>
                         <a href="' . route('translateTeam.detail', $top_user_view_week_item->user->id) . '">
                             ' . $top_user_view_week_item->user->name . '
+                            ' . $verified . '
                         </a>
                     </h3>
                     <div class="d-flex justify-content-between">
@@ -778,6 +813,16 @@ class WebService
             if ($top_user_view_month_item->user->avatar != '') {
                 $avatar = asset('images/avatar/thumbs/230/' . $top_user_view_month_item->user->avatar);
             }
+
+            $verified = '';
+            if ($top_user_view_month_item->user->featured) {
+                $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="20" alt="Featured"/>';
+            }
+
+            if ($top_user_view_month_item->user->super_star) {
+                $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="20" alt="Super Star"/>';
+            }
+
             $top_user_view_month_html .= '<div class="d-flex top-item">
                 <div class="stt" style="color: ' . $colorArray[$key] . '">' . $key + 1 . '</div>
                 <div class="thumbnail">
@@ -788,6 +833,7 @@ class WebService
                     <h3>
                         <a href="' . route('translateTeam.detail', $top_user_view_month_item->user->id) . '">
                             ' . $top_user_view_month_item->user->name . '
+                            ' . $verified . '
                         </a>
                     </h3>
                     <div class="d-flex justify-content-between">
@@ -805,6 +851,16 @@ class WebService
             if ($top_user_view_year->user->avatar != '') {
                 $avatar = asset('images/avatar/thumbs/230/' . $top_user_view_year->user->avatar);
             }
+
+            $verified = '';
+            if ($top_user_view_year->user->featured) {
+                $verified = '<img src="' . asset('img/icon-medal.png') . '" class="mb-1" width="20" alt="Featured"/>';
+            }
+
+            if ($top_user_view_year->user->super_star) {
+                $verified = '<img src="' . asset('img/icon-star.gif') . '" class="mb-1" width="20" alt="Super Star"/>';
+            }
+
             $top_user_view_year_html .= '<div class="d-flex top-item">
                 <div class="stt" style="color: ' . $colorArray[$key] . '">' . $key + 1 . '</div>
                 <div class="thumbnail">
@@ -815,6 +871,7 @@ class WebService
                     <h3>
                         <a href="' . route('translateTeam.detail', $top_user_view_year->user->id) . '">
                             ' . $top_user_view_year->user->name . '
+                            ' . $verified . '
                         </a>
                     </h3>
                     <div class="d-flex justify-content-between">
