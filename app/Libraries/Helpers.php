@@ -575,7 +575,8 @@ class Helpers
 
     public static function replaceCharacterChapter($content)
     {
-        $content = str_replace(' giết ', ' g.i.ế.c ', $content);
+        $content = str_replace('Giết', 'G.i.ế.c', $content);
+        $content = str_replace('giết', 'g.i.ế.c', $content);
         $content = str_replace(' hiếp ', ' h.i.ế.p ', $content);
         $content = str_replace(' hiếp dâm ', ' h.i.ế.p d.ă.m ', $content);
         $content = str_replace(' đâm ', ' đ.â.m ', $content);
@@ -587,7 +588,8 @@ class Helpers
         $content = str_replace(' địt ', ' đ.ị.t ', $content);
         $content = str_replace(' bắn ', ' b.ắ.n ', $content);
         $content = str_replace(' máu ', ' m.á.u ', $content);
-        $content = str_replace(' chết ', ' c.h.ế.t ', $content);
+        $content = str_replace('chết', 'c.h.ế.t', $content);
+        $content = str_replace('Chết', 'C.h.ế.t', $content);
         $content = str_replace(' ngực ', ' n.g.ự.c ', $content);
         $content = str_replace(' súng ', ' s.ú.n.g ', $content);
         $content = str_replace(' liếm ', ' l.i.ế.m ', $content);
@@ -595,12 +597,13 @@ class Helpers
         $content = str_replace(' đụ mẹ ', ' ụ m.ẹ ', $content);
         $content = str_replace(' con chó ', ' con ch.ó ', $content);
         $content = str_replace(' thằng chó ', ' thằng ch.ó ', $content);
+        $content = str_replace(' chó ', ' ch.ó ', $content);
         $content = str_replace(' dao ', ' d.a.o ', $content);
         $content = str_replace(' làm tình ', ' l.à.m t.ì.n.h ', $content);
         $content = str_replace(' tình dục ', ' t.ì.n.h d.ụ.c ', $content);
         $content = str_replace(' kích dục ', ' k.í.c.h d.ụ.c ', $content);
         $content = str_replace(' sexy ', ' s.e.x.y ', $content);
-        $content = str_replace(' s.e.x ', ' s.e.x ', $content);
+        $content = str_replace(' sex ', ' s.e.x ', $content);
         $content = str_replace(' thoát y ', ' t.h.o.á.t y ', $content);
         $content = str_replace(' cắt cổ ', ' c.ắ.t c.ổ ', $content);
         $content = str_replace(' thuốc lá ', ' t.h.u.ố.c lá ', $content);
@@ -637,12 +640,44 @@ class Helpers
         $content = str_replace(' lồn ', ' l.ồ.n ', $content);
         $content = str_replace(' cặc ', ' c.ặ.c ', $content);
         $content = str_replace(' con cu ', ' c.o.n c.u ', $content);
+        $content = str_replace(' dược ', ' d.ư.ợ.c ', $content);
+        $content = str_replace(' quăng chén ', ' quă.ng c.hé.n ', $content);
+        $content = str_replace(' thảm ', ' t.h.ả.m ', $content);
+        $content = str_replace(' đánh ', ' đ.á.n.h ', $content);
+        $content = str_replace(' xúc phạm ', ' x.úc p.hạ.m ', $content);
+        $content = str_replace(' dục ', ' d.ụ.c ', $content);
+        $content = str_replace(' cắn ', ' c.ắ.n ', $content);
+        $content = str_replace(' nhục mạ ', ' nh.ụ.c m.ạ ', $content);
+        $content = str_replace(' xé toạc ', ' x.é to.ạc ', $content);
+        $content = str_replace(' tai nạn ', ' t.a.i n.ạ.n ', $content);
+        $content = str_replace(' bao nuôi ', ' b.a.o n.u.ô.i ', $content);
+        $content = str_replace(' băng vệ sinh ', ' b.ăn.g v.ệ si.nh ', $content);
+        $content = str_replace(' thai phụ ', ' t.h.a.i p.h.ụ ', $content);
+        $content = str_replace(' mang thai ', ' m.a.n.g t.h.a.i ', $content);
+        $content = str_replace(' chửi ', ' c.h.ử.i ', $content);
+        $content = str_replace(' thuốc ', ' t.h.u.ố.c ', $content);
+        $content = str_replace(' bao cao su ', ' b.a.o c.a.o s.u ', $content);
+        $content = str_replace(' thai ', ' t.h.a.i ', $content);
+        $content = str_replace(' tử ', ' t.ử ', $content);
+        $content = str_replace('Tử ', 'T.ử ', $content);
         return $content;
     }
 
     public static function convertCharacterToOrigin($content)
     {
+        $content = str_replace(' b.a.o c.a.o s.u ', ' bao cao su ', $content);
+        $content = str_replace(' t.h.u.ố.c ', ' thuốc ', $content);
+        $content = str_replace(' c.h.ử.i ', ' chửi ', $content);
+        $content = str_replace(' m.a.n.g t.h.a.i ', ' mang thai ', $content);
+        $content = str_replace(' t.h.a.i p.h.ụ ', ' thai phụ ', $content);
+        $content = str_replace(' b.ăn.g v.ệ si.nh ', ' băng vệ sinh ', $content);
+        $content = str_replace(' b.a.o n.u.ô.i ', ' bao nuôi ', $content);
+        $content = str_replace(' x.é to.ạc ', ' xé toạc ', $content);
+        $content = str_replace(' nh.ụ.c m.ạ ', ' nhục mạ ', $content);
+        $content = str_replace(' c.ắ.n ', ' cắn ', $content);
+        $content = str_replace(' d.ụ.c ', ' dục ', $content);
         $content = str_replace('g.i.ế.c', ' giết ', $content);
+        $content = str_replace('G.i.ế.c', ' Giết ', $content);
         $content = str_replace(' g.i.ế.t', ' giết', $content);
         $content = str_replace(' g/i/ế/t', ' giết', $content);
         $content = str_replace(' gi/ết', ' giết', $content);
@@ -761,7 +796,14 @@ class Helpers
         $content = str_replace(' b.a.t n.a.t ', ' bắt nạt ', $content);
         $content = str_replace(' t.ự t.ử', ' tự tử', $content);
         $content = str_replace('T.ự t.ử ', 'Tự tử ', $content);
-        return str_replace(' t.a.i n.ạ.n', ' tai nạn', $content);
+        $content = str_replace(' d.ư.ợ.c ', ' dược ', $content);
+        $content = str_replace(' quă.ng c.hé.n ', ' quăng chén ', $content);
+        $content = str_replace(' đ.á.n.h ', ' đánh ', $content);
+        $content = str_replace(' x.úc p.hạ.m ', ' xúc phạm ', $content);
+        $content = str_replace(' t.h.a.i ', ' thai ', $content);
+        $content = str_replace(' t.ử ', ' tử ', $content);
+        $content = str_replace('T.ử ', ' Tử ', $content);
+        return str_replace(' t.a.i n.ạ.n ', ' tai nạn ', $content);
     }
 
     public static function getThumbnail($path, $img_path, $width = null, $height = null, $watermark = false)

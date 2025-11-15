@@ -4699,9 +4699,9 @@ body.loading .loading-modal {
     }
 
     .story-item-title {
-        font-size: 15px;
+        font-size: 13px;
         margin-bottom: 0;
-        height: 21px;
+        height: 31px;
         -webkit-line-clamp: 1;
     }
 
